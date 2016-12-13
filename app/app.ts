@@ -5,8 +5,16 @@ import { StatusBar } from 'ionic-native';
 import {MyTeamsPage} from './pages/pages';
 import {TournamentsPage} from './pages/pages';
 
+import { HTTP_PROVIDERS} from '@angular/http';
+
+import {EliteApi} from './shared/shared';
+
 @Component({
-  templateUrl: 'build/app.html'
+  templateUrl: 'build/app.html',
+  providers:[
+    EliteApi,
+    HTTP_PROVIDERS
+  ]
 })
 class MyApp {
   @ViewChild(Nav) nav: Nav;
